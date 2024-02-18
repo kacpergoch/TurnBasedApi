@@ -18,21 +18,17 @@ public class Hero extends Unit {
 
     @Override
     public void displayStats(){
-        String sfName = String.format("NAME:\t\t\t%s", unitName);
-        String sfHp = String.format("HP:\t\t\t\t%d" + "/" + "%d", currentHp, maxHp);
-        String sfDmg = String.format("MAX DAMAGE:\t\t%d", maxDmg);
-        String sfHeal = String.format("MAX HEAL:\t\t%d", maxHeal);
-        String sfLevel = String.format("MAX HEAL:\t\t%d", currentLevel);
-        System.out.println(
-                "Hero Stats:" + "\n" +
-                separator2 + "\n" +
-                sfName + "\n" +
-                sfHp + "\n" +
-                sfDmg + "\n" +
-                sfHeal + "\n" +
-                sfLevel + "\n" +
-                separator2
-                );
+        String stats = """
+                \t\t\t\tHero Stats:
+                %s
+                NAME:\t\t\t%s
+                HP:\t\t\t\t%d/%d
+                MAX DAMAGE:\t\t%d
+                MAX HEAL:\t\t%d
+                LEVEL:\t\t\t%d
+                %s
+                """;
+        System.out.printf(stats, separator2, unitName, currentHp, maxHp, maxDmg, maxHeal, currentLevel, separator2);
     }
 
     public void heal(){
@@ -45,14 +41,16 @@ public class Hero extends Unit {
     }
 
     public void displayActions(){
-        System.out.println(separator1);
-        System.out.println("CHOOSE ACTION:");
-        System.out.println(separator1);
-        System.out.println("""
+        String actions = """
+                %s
+                CHOOSE ACTION:
+                %s
                 1. ATTACK
                 2. HEAL
-                3. GIVE UP""");
-        System.out.println(separator1);
+                3. GIVE UP
+                %s
+                """;
+        System.out.printf(actions, separator1, separator1, separator1);
     }
 
     public void levelUp(){

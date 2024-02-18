@@ -5,9 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e6d0580-39d8-43b9-bae5-aeb1815b2b1a" name="Changes" comment="Code review fixes">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/engine/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/engine/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/units/Hero.java" afterDir="false" />
@@ -98,8 +95,17 @@
       <option name="presentableId" value="Default" />
       <updated>1708269114579</updated>
       <workItem from="1708269115670" duration="27000" />
-      <workItem from="1708272628674" duration="6050000" />
+      <workItem from="1708272628674" duration="7441000" />
     </task>
+    <task id="LOCAL-00001" summary="Code review fixes">
+      <option name="closed" value="true" />
+      <created>1708279820828</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1708279820828</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

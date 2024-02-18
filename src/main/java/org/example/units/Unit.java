@@ -19,10 +19,15 @@ public abstract class Unit {
     }
 
     public void displayStats(){
-        String sfName = String.format("NAME:\t\t\t%s", unitName);
-        String sfHp = String.format("HP:\t\t\t\t%d" + "/" + "%d", currentHp, maxHp);
-        String sfDmg = String.format("MAX DAMAGE:\t\t%d", maxDmg);
-        System.out.println("Unit Stats:" + "\n" + separator2 + "\n" + sfName + "\n" + sfHp + "\n" + sfDmg + "\n" + separator2);
+        String stats = """
+                \t\t\t\tUnit Stats:
+                %s
+                NAME:\t\t\t%s
+                HP:\t\t\t\t%d/%d
+                MAX DAMAGE:\t\t%d
+                %s
+                """;
+        System.out.printf(stats, separator2, unitName, currentHp, maxHp, maxDmg, separator2);
     }
 
     public void takeDamage(int damage){
@@ -33,10 +38,20 @@ public abstract class Unit {
         int damage = random.nextInt(maxDmg);
         if (damage > 0){
             opponent.takeDamage(damage);
-            System.out.println(separator2 + "\n" + unitName + " ATTACKS " + opponent.unitName + " FOR " + damage + " DMG" + "\n" + separator2);
+            String attack = """
+                    %s
+                    %s ATTACKS %s FOR %d DMG
+                    %s
+                    """;
+            System.out.printf(attack, separator2, unitName, opponent.unitName, damage, separator2);
             return;
         }
-        System.out.println(separator2 + "\n" + unitName + " MISSES " + opponent.unitName + "\n" + separator2);
+        String miss = """
+                %s
+                %s MISSES %s
+                %s
+                """;
+        System.out.printf(miss, separator2, unitName, opponent.unitName, separator2);
     }
 
     public boolean isAlive(){

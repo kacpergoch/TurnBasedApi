@@ -16,7 +16,7 @@ public class Game {
     private static Unit opponent;
     public static void startGame(){
         System.out.println(separator1);
-        System.out.println("            NEW GAME STARTED");
+        System.out.println("\t\t\t\tNEW GAME STARTED");
         System.out.println(separator1);
         createHero();
         System.out.println(separator1);
@@ -32,16 +32,16 @@ public class Game {
             System.out.println(winner.unitName + " WON");
             if (winner == hero) {
                 hero.levelUp();
-                System.out.println("NEW FIGHT");
+                System.out.println("\t\t\t\tNEW FIGHT");
             } else {
-                System.out.println("GAME OVER");
+                System.out.println("\t\t\t\tGAME OVER");
             }
         }
     }
 
     private static void createHero(){
         String name;
-        System.out.println("            NAME YOUR HERO:");
+        System.out.println("\t\t\t\tNAME YOUR HERO:");
         name = scanner.nextLine();
         hero = new Hero(name);
     }
