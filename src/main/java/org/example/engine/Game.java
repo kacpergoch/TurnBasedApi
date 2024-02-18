@@ -4,19 +4,22 @@ package org.example.engine;
 
 import org.example.units.Hero;
 import org.example.units.Unit;
-
 import java.util.Scanner;
+
+import static org.example.Constants.separator1;
+import static org.example.Constants.separator2;
+
 
 public class Game {
     private static final Scanner scanner = new Scanner(System.in);
     private static Hero hero;
     private static Unit opponent;
     public static void startGame(){
-        System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-");
+        System.out.println(separator1);
         System.out.println("            NEW GAME STARTED");
-        System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-");
+        System.out.println(separator1);
         createHero();
-        System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-");
+        System.out.println(separator1);
         gameLoop();
     }
 
@@ -54,8 +57,9 @@ public class Game {
     private static void duel(){
         int round = 0;
         while(hero.isAlive() && opponent.isAlive()){
-            System.out.println("            ROUND " + ++round);
-            System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-");
+            ++round;
+            System.out.println("            ROUND " + round);
+            System.out.println(separator2);
             hero.displayStats();
             opponent.displayStats();
             handleChoice(opponent);
@@ -67,23 +71,22 @@ public class Game {
 
     private static void handleChoice(Unit opponent){
         int choice;
-        do{
-            hero.displayActions();
-            choice = scanner.nextInt();
-        }while(choice < 1 || choice > 3);
+        hero.displayActions();
+        while (true) {
+            try {
+                choice = scanner.nextInt();
 
-        switch (choice){
-            case 1:
-                hero.attack(opponent);
+                switch (choice) {
+                    case 1 -> hero.attack(opponent);
+                    case 2 -> hero.heal();
+                    case 3 -> hero.giveUp();
+                    default -> throw new IllegalArgumentException();
+                }
+
                 break;
-            case 2:
-                hero.heal();
-                break;
-            case 3:
-                hero.giveUp();
-                break;
-            default:
-                break;
+            } catch (IllegalArgumentException e){
+                System.out.println("WRONG VALUE");
+            }
         }
     }
 }

@@ -2,6 +2,9 @@ package org.example.units;
 
 import java.util.Random;
 
+import static org.example.Constants.separator1;
+import static org.example.Constants.separator2;
+
 public class Hero extends Unit {
     int maxHeal;
     int currentLevel;
@@ -12,18 +15,26 @@ public class Hero extends Unit {
         maxHeal = 5;
         currentLevel = 1;
     }
+
     @Override
     public void displayStats(){
-        System.out.println("Hero Stats:");
-        super.printSeparator();
-        System.out.println("Name:\t\t\t" + unitName);
-        System.out.println("HP:\t\t\t\t" + currentHp + "/" + maxHp);
-        System.out.println("Damage:\t\t\t" + maxDmg);
-        System.out.println("Max heal:\t\t" + maxHeal);
-        System.out.println("Level:\t\t\t" + currentLevel);
-        super.printSeparator();
-        System.out.println();
+        String sfName = String.format("NAME:\t\t\t%s", unitName);
+        String sfHp = String.format("HP:\t\t\t\t%d" + "/" + "%d", currentHp, maxHp);
+        String sfDmg = String.format("MAX DAMAGE:\t\t%d", maxDmg);
+        String sfHeal = String.format("MAX HEAL:\t\t%d", maxHeal);
+        String sfLevel = String.format("MAX HEAL:\t\t%d", currentLevel);
+        System.out.println(
+                "Hero Stats:" + "\n" +
+                separator2 + "\n" +
+                sfName + "\n" +
+                sfHp + "\n" +
+                sfDmg + "\n" +
+                sfHeal + "\n" +
+                sfLevel + "\n" +
+                separator2
+                );
     }
+
     public void heal(){
         int heal = random.nextInt(maxHeal - 1) + 1;
         currentHp += heal;
@@ -31,17 +42,17 @@ public class Hero extends Unit {
         if (currentHp > maxHp) {
             currentHp = maxHp;
         }
-
     }
 
     public void displayActions(){
-        System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-");
+        System.out.println(separator1);
         System.out.println("CHOOSE ACTION:");
-        System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-");
-        System.out.println("1. ATTACK");
-        System.out.println("2. HEAL");
-        System.out.println("3. GIVE UP");
-        System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-");
+        System.out.println(separator1);
+        System.out.println("""
+                1. ATTACK
+                2. HEAL
+                3. GIVE UP""");
+        System.out.println(separator1);
     }
 
     public void levelUp(){
