@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id("io.swagger.core.v3.swagger-gradle-plugin") version "2.2.21"
 }
 
 group = 'org.example'

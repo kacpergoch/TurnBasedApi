@@ -2,14 +2,14 @@ package org.example.dto;
 
 import org.example.model.engine.Game;
 
-public class TurnResponse {
-    String opponentMove;
-    String heroMove;
-    Game game;
+public class TurnResponse implements Response{
+    public String heroMove;
+    public String opponentMove;
+    public Game game;
 
-    TurnResponse(Game game, String opponentMove, String heroMove){
-        this.opponentMove = opponentMove;
+    public TurnResponse(Game game, String opponentMove, String heroMove){
         this.heroMove = heroMove;
+        this.opponentMove = opponentMove;
         this.game = game;
     }
 }

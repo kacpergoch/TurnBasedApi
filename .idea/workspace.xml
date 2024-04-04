@@ -4,22 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e6d0580-39d8-43b9-bae5-aeb1815b2b1a" name="Changes" comment="Console implementation">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/api/GameController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/api/GameService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/TurnResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/WinnerResponse.java" afterDir="false" />
+    <list default="true" id="2e6d0580-39d8-43b9-bae5-aeb1815b2b1a" name="Changes" comment="String formatting changes">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/Response.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/api/UnitController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/api/UnitController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/api/UnitService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/api/UnitService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/engine/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/engine/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/engine/OpponentSpawner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/Dragon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/units/Dragon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/Goblin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/units/Goblin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/units/Hero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/Imp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/units/Imp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/units/Unit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/units/Unit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Constants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/api/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/api/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/api/GameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/api/GameService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dto/TurnResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/TurnResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dto/WinnerResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/WinnerResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/units/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/units/Hero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/units/Unit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/units/Unit.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +101,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-20.0.2-corretto-20.0.2.1-4caba194b151-96d4b369" />
+        <option value="jdk-19.0.2-temurin-19.0.2-3183f394aec4-2f489abc" />
+        <option value="jdk-20.0.2-corretto-20.0.2.1-3183f394aec4-907a2361" />
       </set>
     </attachedChunks>
   </component>
@@ -120,7 +116,8 @@
       <updated>1708269114579</updated>
       <workItem from="1708269115670" duration="27000" />
       <workItem from="1708364959578" duration="2610000" />
-      <workItem from="1708625352222" duration="664000" />
+      <workItem from="1712244509918" duration="5989000" />
+      <workItem from="1712250518060" duration="3779000" />
     </task>
     <servers />
   </component>

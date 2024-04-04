@@ -1,11 +1,15 @@
 package org.example.dto;
 
-import org.example.model.engine.Game;
 
-public class WinnerResponse {
-    TurnResponse lastTurn;
-    WinnerResponse(TurnResponse lastTurn){
-        String message = String.format("%s HAS WON THE BATTLE", lastTurn.game.getOpponent().getUnitName());
+import org.example.model.units.Unit;
+
+public class WinnerResponse implements Response{
+    public Unit winner;
+    public String message;
+    public TurnResponse lastTurn;
+    public WinnerResponse(TurnResponse lastTurn, Unit winner){
+        message = String.format("%s HAS WON THE BATTLE", winner.getUnitName());
+        this.winner = winner;
         this.lastTurn = lastTurn;
     }
 }

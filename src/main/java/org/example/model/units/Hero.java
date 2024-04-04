@@ -2,9 +2,6 @@ package org.example.model.units;
 
 import java.util.Random;
 
-import static org.example.Constants.separator1;
-import static org.example.Constants.separator2;
-
 public class Hero extends Unit {
     protected int maxHeal;
     protected int currentLevel;
@@ -16,7 +13,7 @@ public class Hero extends Unit {
         currentLevel = 1;
     }
 
-    public String heal(){
+    public int heal(){
         int heal = random.nextInt(maxHeal - 1) + 1;
         currentHp += heal;
 
@@ -24,7 +21,7 @@ public class Hero extends Unit {
             currentHp = maxHp;
         }
 
-        return String.format("%s HEALED FOR %d HP", unitName, heal);
+        return currentHp;
     }
 
     public void levelUp(){
@@ -35,8 +32,7 @@ public class Hero extends Unit {
         currentHp = maxHp;
     }
 
-    public String giveUp(){
+    public void giveUp(){
         currentHp = 0;
-        return String.format("%s GAVE UP", unitName);
     }
 }

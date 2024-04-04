@@ -1,6 +1,6 @@
 package org.example.api;
 
-import org.example.dto.TurnResponse;
+import org.example.dto.Response;
 import org.example.model.engine.Game;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,8 +16,8 @@ public class GameController {
         this.gameService = gameService;
     }
 
-    @GetMapping("/new")
-    public ResponseEntity<Game> newGame(String playerName) {
+    @PostMapping("/new")
+    public ResponseEntity<Game> newGame(@RequestParam("playerName") String playerName) {
         try{
             return ResponseEntity.ok(gameService.startGame(playerName));
         } catch (Exception e){
@@ -30,12 +30,13 @@ public class GameController {
         try{
             return ResponseEntity.ok(gameService.game);
         } catch (Exception e){
+
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "THERE IS NO GAME", e);
         }
     }
 
     @PostMapping("/action/{action}")
-    public ResponseEntity<TurnResponse> action(@PathVariable("action") String action) {
+    public ResponseEntity<Response> action(@PathVariable("action") String action) {
         try{
             return ResponseEntity.ok(gameService.takeAction(action));
         } catch (Exception e){

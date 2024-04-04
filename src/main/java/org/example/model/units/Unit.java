@@ -2,7 +2,6 @@ package org.example.model.units;
 
 import java.util.Random;
 
-import static org.example.Constants.separator2;
 
 public abstract class Unit {
     Random random = new Random();
@@ -37,15 +36,17 @@ public abstract class Unit {
 
     public void takeDamage(int damage){
         currentHp -= damage;
+        if (currentHp < 0){
+            currentHp = 0;
+        }
     }
 
-    public String attack(Unit opponent){
+    public int attack(Unit opponent){
         int damage = random.nextInt(maxDmg);
         if (damage > 0){
             opponent.takeDamage(damage);
-            return String.format("%s ATTACKS %s FOR %d DMG", unitName, opponent.unitName, damage);
         }
-        return String.format("%s MISSES %s",unitName, opponent.unitName);
+        return damage;
     }
 
     public boolean isAlive(){
