@@ -1,4 +1,4 @@
-package org.example.units;
+package org.example.model.units;
 
 public class Dragon extends Unit{
     public Dragon(){

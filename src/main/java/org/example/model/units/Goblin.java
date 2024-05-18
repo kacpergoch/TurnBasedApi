@@ -1,4 +1,4 @@
-package org.example.units;
+package org.example.model.units;
 
 public class Goblin extends Unit{
     public Goblin(){
