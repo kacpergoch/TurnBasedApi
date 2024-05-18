@@ -4,11 +4,10 @@ import org.example.dto.Response;
 import org.example.model.engine.Game;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
-@Controller
+@RestController
 @RequestMapping("game")
 public class GameController {
     private final GameService gameService;
